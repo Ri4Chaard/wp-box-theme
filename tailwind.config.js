@@ -1,9 +1,12 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: [],
-  theme: {
-    extend: {},
-  },
-  plugins: [],
-}
-
+    content: ["./**/*.php"],
+    theme: {
+        extend: {
+            fontFamily: {
+                montserrat: ["Montserrat", "sans-serif"],
+            },
+        },
+    },
+    plugins: [],
+};
