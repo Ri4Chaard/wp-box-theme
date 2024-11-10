@@ -1,0 +1,19 @@
+{
+    "name": "box-task",
+    "version": "1.0.0",
+    "description": "my wp-theme",
+    "main": "index.php",
+    "scripts": {
+        "start-tailwind": "npx tailwindcss -i ./tailwind.css -o ./tailwind-output.css --watch",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [
+        "wordpress",
+        "theme"
+    ],
+    "author": "Richard",
+    "license": "ISC",
+    "devDependencies": {
+        "tailwindcss": "^3.4.14"
+    }
+}
