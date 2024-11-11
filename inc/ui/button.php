@@ -2,7 +2,7 @@
 $button_text = get_query_var('button_text', 'Default Text');
 ?>
 
-<button class="relative text-sm px-[35px] py-[15px] text-white uppercase transition-all duration-500 hover:bg-white hover:text-orange-500 group hover:duration-500">
+<button class="relative text-sm px-[35px] py-[15px] text-white uppercase transition-all duration-300 hover:bg-white hover:text-orange-600 group hover:duration-300">
     <?php echo $button_text; ?>
 
     <span class="absolute inset-0 pointer-events-none">

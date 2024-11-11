@@ -1,9 +1,14 @@
-      <div class="container transition-all mx-auto px-28 flex items-center justify-between h-[100px] tracking-wider">
-          <div>
-              LOGO HERE
+      <div class="container transition-all mx-auto flex items-center justify-between h-[100px] tracking-wider">
+          <div class="h-full">
+              <a href="<?php get_home_url() ?>">
+                  <img class="w-[124px] h-full" src="<?php bloginfo('template_directory') ?>/assets/logo.svg" alt="image">
+              </a>
+
           </div>
 
           <div class="flex items-center">
+              <p>Search</p>
+
               <?php
                 $args = array(
                     'theme_location' => 'top-menu',
@@ -19,7 +24,7 @@
 
               <?php
                 set_query_var('button_text', 'Login');
-                get_template_part('components/ui/button');
+                get_template_part('inc/ui/button');
                 ?>
 
           </div>
