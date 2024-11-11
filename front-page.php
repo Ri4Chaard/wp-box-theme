@@ -4,6 +4,10 @@
 get_template_part('inc/section', 'banner');
 ?>
 
+<?php
+get_template_part('inc/section', 'big-text');
+?>
+
 <!-- <section class="bg-black text-white">
     <h1 class="text-xl"><?php the_title(); ?></h1>
     Home page section

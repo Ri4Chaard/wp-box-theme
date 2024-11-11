@@ -1,7 +1,7 @@
 <section class="relative mt-[50px] h-[600px] flex items-center justify-center overflow-hidden">
 
     <div class="w-[585px] h-full z-10 flex flex-col gap-4 items-center justify-end text-center pb-28">
-        <div class="text-4xl uppercase font-extrabold"><?php the_field('banner_title_text'); ?></div>
+        <div class="font-termina text-[40px] leading-10 uppercase font-extrabold"><?php the_field('banner_title_text'); ?></div>
         <div class="text-sm opacity-70 mb-4">
             <?php the_field('banner_block_text',); ?>
         </div>

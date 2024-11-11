@@ -18,6 +18,30 @@ function theme_enqueue_styles()
 }
 add_action('wp_enqueue_scripts', 'theme_enqueue_styles');
 
+//Custom font
+function add_custom_fonts()
+{
+    $template_dir = get_template_directory_uri();
+    echo "
+    <style>
+        @font-face {
+            font-family: 'Termina Test';
+            src: url('{$template_dir}/assets/fonts/Termina Test/TerminaTest-Bold.otf') format('opentype');
+            font-weight: 700;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Termina Test';
+            src: url('{$template_dir}/assets/fonts/Termina Test/TerminaTest-Regular.otf') format('opentype');
+            font-weight: 400;
+            font-style: normal;
+        }
+    </style>
+    ";
+}
+add_action('wp_head', 'add_custom_fonts');
+
+
 
 //Theme Options
 add_theme_support('menus');
