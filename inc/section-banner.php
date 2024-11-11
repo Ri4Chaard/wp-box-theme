@@ -1,11 +1,12 @@
 <section class="relative mt-[50px] h-[600px] flex items-center justify-center overflow-hidden">
 
     <div class="w-[585px] h-full z-10 flex flex-col gap-4 items-center justify-end text-center pb-28">
-        <h2 class="text-4xl font-extrabold">LEARN <span class="text-red-600">BOXING FIGHT</span> LIKE CHAMPIONS</h2>
-        <p class="text-sm opacity-70 mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
+        <div class="text-4xl uppercase font-extrabold"><?php the_field('banner_title_text'); ?></div>
+        <div class="text-sm opacity-70 mb-4">
+            <?php the_field('banner_block_text',); ?>
+        </div>
         <?php
-        set_query_var('button_text', 'Book a class');
-        // set_query_var('style', 'mt-4');
+        set_query_var('button_text', "banner_button_text");
         get_template_part('inc/ui/button-secondary');
         ?>
     </div>
