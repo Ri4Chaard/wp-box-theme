@@ -32,6 +32,18 @@ function add_custom_fonts()
         }
         @font-face {
             font-family: 'Termina Test';
+            src: url('{$template_dir}/assets/fonts/Termina Test/TerminaTest-Demi.otf') format('opentype');
+            font-weight: 600;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Termina Test';
+            src: url('{$template_dir}/assets/fonts/Termina Test/TerminaTest-Medium.otf') format('opentype');
+            font-weight: 500;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Termina Test';
             src: url('{$template_dir}/assets/fonts/Termina Test/TerminaTest-Regular.otf') format('opentype');
             font-weight: 400;
             font-style: normal;
@@ -40,6 +52,24 @@ function add_custom_fonts()
     ";
 }
 add_action('wp_head', 'add_custom_fonts');
+
+//JS
+function theme_enqueue_scripts()
+{
+    wp_enqueue_style(
+        'tailwind-style',
+        get_template_directory_uri() . '/assets/css/tailwind-output.css',
+        array(),
+        '1.0'
+    );
+    wp_enqueue_script(
+        'main-scripts',
+        get_template_directory_uri() . '/assets/js/main.js',
+        array(),
+        '1.0'
+    );
+}
+add_action('wp_enqueue_scripts', 'theme_enqueue_scripts');
 
 
 

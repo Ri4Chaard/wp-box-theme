@@ -1,7 +1,6 @@
 <footer>
 
-    This is footer
-
+    <?php get_template_part('inc/footer'); ?>
 
 </footer>
 
