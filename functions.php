@@ -74,3 +74,59 @@ function add_menu_list_item_class($classes, $item, $args)
     return $classes;
 }
 add_filter('nav_menu_css_class', 'add_menu_list_item_class', 1, 3);
+
+// Boxing Records Section Customizer
+function boxing_records_customizer($wp_customize)
+{
+    // Section settings
+    $wp_customize->add_section('boxing_records_section', [
+        'title' => 'Boxing Records',
+        'description' => 'Boxing records section settings',
+        'priority' => 30,
+    ]);
+
+    for ($i = 1; $i <= 4; $i++) {
+        $wp_customize->add_setting("record_text_$i", [
+            'default' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.',
+            'sanitize_callback' => 'sanitize_text_field',
+        ]);
+        $wp_customize->add_control("record_text_$i", [
+            'label' => "Text for Section $i",
+            'section' => 'boxing_records_section',
+            'type' => 'textarea',
+        ]);
+
+        $wp_customize->add_setting("record_image_$i", [
+            'default' => '',
+            'sanitize_callback' => 'absint',
+        ]);
+        $wp_customize->add_control(new WP_Customize_Media_Control($wp_customize, "record_image_$i", [
+            'label' => "Upload Image for Section $i",
+            'section' => 'boxing_records_section',
+            'mime_type' => 'image',
+        ]));
+    }
+
+    for ($i = 1; $i <= 4; $i++) {
+        $wp_customize->add_setting("record_number_$i", [
+            'default' => 'Num+',
+            'sanitize_callback' => 'sanitize_text_field',
+        ]);
+        $wp_customize->add_control("record_number_$i", [
+            'label' => "Records Count Text $i",
+            'section' => 'boxing_records_section',
+            'type' => 'text',
+        ]);
+
+        $wp_customize->add_setting("record_label_$i", [
+            'default' => 'Text',
+            'sanitize_callback' => 'sanitize_text_field',
+        ]);
+        $wp_customize->add_control("record_label_$i", [
+            'label' => "Record Label $i",
+            'section' => 'boxing_records_section',
+            'type' => 'text',
+        ]);
+    }
+}
+add_action('customize_register', 'boxing_records_customizer');
