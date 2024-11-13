@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function () {
         postSlider.style.transform = `translateX(-${currentIndex * 100}%)`;
 
         // Обновляем текст индекса
-        slideIndex.textContent = `${currentIndex + 1} из ${slides.length}`;
+        slideIndex.textContent = `${currentIndex + 1}/${slides.length}`;
 
         // Отключаем кнопки на первом и последнем слайдах
         prevBtn.disabled = currentIndex === 0;

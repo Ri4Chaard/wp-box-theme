@@ -75,6 +75,8 @@ add_action('wp_enqueue_scripts', 'theme_enqueue_scripts');
 
 //Theme Options
 add_theme_support('menus');
+add_theme_support('post-thumbnails');
+add_theme_support('widgets');
 
 //Menus
 register_nav_menus(
@@ -169,7 +171,7 @@ function classes_post_type()
             'name' => 'Classes',
             'singular_name' => 'Class',
         ),
-        // 'hierarchical' => true,
+        'hierarchical' => true,
         'public' => true,
         'has_archive' => true,
         'menu_icon' => 'dashicons-welcome-learn-more',
