@@ -17,6 +17,10 @@ get_template_part('inc/section', 'records');
 get_template_part('inc/section', 'big-text-outline');
 ?>
 
+<?php
+get_template_part('inc/section', 'classes');
+?>
+
 
 
 <?php get_footer(); ?>

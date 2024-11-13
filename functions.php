@@ -160,3 +160,22 @@ function boxing_records_customizer($wp_customize)
     }
 }
 add_action('customize_register', 'boxing_records_customizer');
+
+//Classes
+function classes_post_type()
+{
+    $args = array(
+        'labels' => array(
+            'name' => 'Classes',
+            'singular_name' => 'Class',
+        ),
+        // 'hierarchical' => true,
+        'public' => true,
+        'has_archive' => true,
+        'menu_icon' => 'dashicons-welcome-learn-more',
+        'supports' => array('title', 'editor', 'thumbnail', 'custom-fields'),
+    );
+
+    register_post_type('classes', $args);
+}
+add_action('init', 'classes_post_type');
