@@ -21,6 +21,10 @@ get_template_part('inc/section', 'big-text-outline');
 get_template_part('inc/section', 'classes');
 ?>
 
+<?php
+get_template_part('inc/section', 'instructors');
+?>
+
 
 
 <?php get_footer(); ?>

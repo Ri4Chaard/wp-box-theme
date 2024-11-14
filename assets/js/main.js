@@ -14,19 +14,15 @@ document.addEventListener("DOMContentLoaded", function () {
     const slideIndex = document.getElementById("slide-index");
     let currentIndex = 0;
 
-    // Обновление позиции слайдера
     function updateSliderPosition() {
         postSlider.style.transform = `translateX(-${currentIndex * 100}%)`;
 
-        // Обновляем текст индекса
         slideIndex.textContent = `${currentIndex + 1}/${slides.length}`;
 
-        // Отключаем кнопки на первом и последнем слайдах
         prevBtn.disabled = currentIndex === 0;
         nextBtn.disabled = currentIndex === slides.length - 1;
     }
 
-    // Обработчик кнопки "Предыдущий"
     prevBtn.addEventListener("click", () => {
         if (currentIndex > 0) {
             currentIndex--;
@@ -34,7 +30,6 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
-    // Обработчик кнопки "Следующий"
     nextBtn.addEventListener("click", () => {
         if (currentIndex < slides.length - 1) {
             currentIndex++;
@@ -42,6 +37,5 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
-    // Инициализация слайдера
     updateSliderPosition();
 });

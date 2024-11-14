@@ -15,6 +15,13 @@ function theme_enqueue_styles()
         'https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap',
         false
     );
+
+    wp_enqueue_style(
+        'swiper-styles',
+        'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css',
+        array(),
+        '1.0'
+    );
 }
 add_action('wp_enqueue_scripts', 'theme_enqueue_styles');
 
@@ -56,15 +63,21 @@ add_action('wp_head', 'add_custom_fonts');
 //JS
 function theme_enqueue_scripts()
 {
-    wp_enqueue_style(
-        'tailwind-style',
-        get_template_directory_uri() . '/assets/css/tailwind-output.css',
+    wp_enqueue_script(
+        'main-scripts',
+        get_template_directory_uri() . '/assets/js/main.js',
         array(),
         '1.0'
     );
     wp_enqueue_script(
-        'main-scripts',
-        get_template_directory_uri() . '/assets/js/main.js',
+        'swiper',
+        'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js',
+        array(),
+        '1.0'
+    );
+    wp_enqueue_script(
+        'my-swiper',
+        get_template_directory_uri() . '/assets/js/swiper.js',
         array(),
         '1.0'
     );
@@ -174,10 +187,29 @@ function classes_post_type()
         'hierarchical' => true,
         'public' => true,
         'has_archive' => true,
-        'menu_icon' => 'dashicons-welcome-learn-more',
+        'menu_icon' => 'dashicons-groups',
         'supports' => array('title', 'editor', 'thumbnail', 'custom-fields'),
     );
 
     register_post_type('classes', $args);
 }
 add_action('init', 'classes_post_type');
+
+//Instructors
+function instructors_post_type()
+{
+    $args = array(
+        'labels' => array(
+            'name' => 'Instructors',
+            'singular_name' => 'Instructor',
+        ),
+        'hierarchical' => true,
+        'public' => true,
+        'has_archive' => true,
+        'menu_icon' => 'dashicons-id-alt',
+        'supports' => array('title', 'editor', 'thumbnail', 'custom-fields'),
+    );
+
+    register_post_type('instructors', $args);
+}
+add_action('init', 'instructors_post_type');
