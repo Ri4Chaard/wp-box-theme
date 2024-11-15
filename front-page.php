@@ -32,6 +32,10 @@ get_template_part('inc/section', 'news');
 get_template_part('inc/section', 'products');
 ?>
 
+<?php
+get_template_part('inc/section', 'questions');
+?>
+
 
 
 <?php get_footer(); ?>

@@ -251,3 +251,22 @@ function products_post_type()
     register_post_type('products', $args);
 }
 add_action('init', 'products_post_type');
+
+//Questions
+function questions_post_type()
+{
+    $args = array(
+        'labels' => array(
+            'name' => 'Questions',
+            'singular_name' => 'Question',
+        ),
+        'hierarchical' => true,
+        'public' => true,
+        'has_archive' => true,
+        'menu_icon' => 'dashicons-testimonial',
+        'supports' => array('title', 'editor', 'thumbnail', 'custom-fields'),
+    );
+
+    register_post_type('questions', $args);
+}
+add_action('init', 'questions_post_type');
