@@ -1,4 +1,4 @@
-<div class="swiper swiper-container">
+<div class="swiper swiper-container-instructors">
     <div class="swiper-wrapper">
         <?php
         $args = array(

@@ -232,3 +232,22 @@ function news_post_type()
     register_post_type('news', $args);
 }
 add_action('init', 'news_post_type');
+
+//Products
+function products_post_type()
+{
+    $args = array(
+        'labels' => array(
+            'name' => 'Products',
+            'singular_name' => 'Product',
+        ),
+        'hierarchical' => true,
+        'public' => true,
+        'has_archive' => true,
+        'menu_icon' => 'dashicons-products',
+        'supports' => array('title', 'editor', 'thumbnail', 'custom-fields'),
+    );
+
+    register_post_type('products', $args);
+}
+add_action('init', 'products_post_type');

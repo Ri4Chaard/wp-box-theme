@@ -8,7 +8,6 @@ get_template_part('inc/section', 'banner');
 get_template_part('inc/section', 'big-text');
 ?>
 
-
 <?php
 get_template_part('inc/section', 'records');
 ?>
@@ -27,6 +26,10 @@ get_template_part('inc/section', 'instructors');
 
 <?php
 get_template_part('inc/section', 'news');
+?>
+
+<?php
+get_template_part('inc/section', 'products');
 ?>
 
 
