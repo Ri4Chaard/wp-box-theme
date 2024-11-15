@@ -25,6 +25,10 @@ get_template_part('inc/section', 'classes');
 get_template_part('inc/section', 'instructors');
 ?>
 
+<?php
+get_template_part('inc/section', 'news');
+?>
+
 
 
 <?php get_footer(); ?>

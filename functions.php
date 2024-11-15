@@ -213,3 +213,22 @@ function instructors_post_type()
     register_post_type('instructors', $args);
 }
 add_action('init', 'instructors_post_type');
+
+//News
+function news_post_type()
+{
+    $args = array(
+        'labels' => array(
+            'name' => 'News',
+            'singular_name' => 'News',
+        ),
+        'hierarchical' => true,
+        'public' => true,
+        'has_archive' => true,
+        'menu_icon' => 'dashicons-text-page',
+        'supports' => array('title', 'editor', 'thumbnail', 'custom-fields'),
+    );
+
+    register_post_type('news', $args);
+}
+add_action('init', 'news_post_type');
