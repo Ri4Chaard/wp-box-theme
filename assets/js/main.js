@@ -46,10 +46,8 @@ function toggleContent(button) {
     const svgWrapper = button.querySelector("svg");
 
     content.classList.toggle("max-h-0");
-    content.classList.toggle("hidden");
     content.classList.toggle("opacity-0");
     content.classList.toggle("max-h-[1000px]");
-    content.classList.toggle("visible");
     content.classList.toggle("opacity-100");
 
     svgWrapper.classList.toggle("rotate-45");

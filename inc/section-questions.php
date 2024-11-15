@@ -44,7 +44,7 @@
                             </div>
                         </button>
 
-                        <div class="max-h-0 opacity-0 hidden overflow-hidden text-sm transition-all ease-in-out duration-300">
+                        <div class="max-h-0 opacity-0 overflow-hidden text-sm transition-all ease-in-out duration-300">
                             <?php the_content() ?>
                         </div>
                     </div>

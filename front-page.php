@@ -36,6 +36,10 @@ get_template_part('inc/section', 'products');
 get_template_part('inc/section', 'questions');
 ?>
 
+<?php
+get_template_part('inc/section', 'instagram');
+?>
+
 
 
 <?php get_footer(); ?>
