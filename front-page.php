@@ -44,6 +44,10 @@ get_template_part('inc/section', 'reviews');
 get_template_part('inc/section', 'instagram');
 ?>
 
+<?php
+get_template_part('inc/section', 'feedback');
+?>
+
 
 
 <?php get_footer(); ?>

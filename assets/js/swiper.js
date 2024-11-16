@@ -26,6 +26,12 @@ document.addEventListener("DOMContentLoaded", function () {
         paginationEl: ".instructors-pagination",
         nextEl: ".instructors-next",
         prevEl: ".instructors-prev",
+        additionalOptions: {
+            allowTouchMove: false,
+            autoplay: {
+                delay: 3000,
+            },
+        },
     });
 
     initializeSwiper(".swiper-container-products", {
@@ -56,5 +62,8 @@ document.addEventListener("DOMContentLoaded", function () {
         paginationEl: ".reviews-pagination",
         nextEl: ".reviews-next",
         prevEl: ".reviews-prev",
+        additionalOptions: {
+            allowTouchMove: false,
+        },
     });
 });

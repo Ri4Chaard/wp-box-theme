@@ -84,7 +84,7 @@
                                     <div class="flex-1 self-end">
                                         <?php
                                         set_query_var('button_text', "Add to cart");
-                                        set_query_var('style', 'text-xs px-0 py-[11px] w-full');
+                                        set_query_var('style', 'text-xs py-[11px] w-full');
                                         get_template_part('inc/ui/button-outline');
                                         ?>
                                     </div>
