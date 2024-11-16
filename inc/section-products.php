@@ -29,7 +29,7 @@
                 ?>
 
                         <div class="swiper-slide" style="display: flex; justify-content: center; overflow: visible;">
-                            <div class="p-[30px] max-w-[404px] cursor-pointer hover:shadow-lg">
+                            <div class="p-[30px] w-[500px] cursor-pointer hover:shadow-lg">
                                 <div class="relative bg-black z-0 mb-5">
                                     <a href="/">
                                         <?php if (has_post_thumbnail()): ?>
@@ -84,7 +84,7 @@
                                     <div class="flex-1 self-end">
                                         <?php
                                         set_query_var('button_text', "Add to cart");
-                                        set_query_var('style', 'text-xs flex-0 px-4 py-[11px] w-full');
+                                        set_query_var('style', 'text-xs px-0 py-[11px] w-full');
                                         get_template_part('inc/ui/button-outline');
                                         ?>
                                     </div>
@@ -101,8 +101,8 @@
             </div>
         </div>
         <div class="absolute top-[10vh] right-0 flex gap-8">
-            <button class="swiper-button-prev" style="position:relative; color: #dc2626; border: 2px solid #dc2626; width: 60px; height: 60px;"></button>
-            <button class="swiper-button-next" style="position:relative; color: #dc2626; border: 2px solid #dc2626; width: 60px; height: 60px;"></button>
+            <button class="swiper-button-prev products-prev" style="position:relative; color: #dc2626; border: 2px solid #dc2626; width: 60px; height: 60px;"></button>
+            <button class="swiper-button-next products-next" style="position:relative; color: #dc2626; border: 2px solid #dc2626; width: 60px; height: 60px;"></button>
         </div>
     </div>
 

@@ -60,9 +60,9 @@
     </div>
 </div>
 
-<div class="font-termina text-[32px] font-bold swiper-pagination absolute" style="width: auto; color: #dc2626; display: flex;"></div>
+<div class="font-termina text-[32px] font-bold swiper-pagination instructors-pagination absolute" style="width: auto; color: #dc2626; display: flex;"></div>
 
 <div class="absolute bottom-20 right-0 flex gap-8">
-    <button class="swiper-button-prev" style="position:relative; color: #dc2626; border: 2px solid #dc2626; width: 60px; height: 60px;"></button>
-    <button class="swiper-button-next" style="position:relative; color: #dc2626; border: 2px solid #dc2626; width: 60px; height: 60px;"></button>
+    <button class="swiper-button-prev instructors-prev transition-colors" style="position:relative; width: 60px; height: 60px;"></button>
+    <button class="swiper-button-next instructors-next transition-colors" style="position:relative; width: 60px; height: 60px;"></button>
 </div>

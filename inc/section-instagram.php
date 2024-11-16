@@ -14,7 +14,7 @@
             <div class="flex justify-center">
                 <img
                     class="w-full h-full object-cover grayscale"
-                    src="<?php echo $instagram_image ? $instagram_image : get_template_directory_uri() . '/assets/images/products-section/Photo-1-2.png'; ?>"
+                    src="<?php echo $instagram_image ? $instagram_image : get_template_directory_uri() . '/assets/images/instagram-section/Photo-1-2.png'; ?>"
                     alt="<?php echo $index; ?>">
             </div>
         <?php endfor; ?>

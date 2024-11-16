@@ -37,6 +37,10 @@ get_template_part('inc/section', 'questions');
 ?>
 
 <?php
+get_template_part('inc/section', 'reviews');
+?>
+
+<?php
 get_template_part('inc/section', 'instagram');
 ?>
 

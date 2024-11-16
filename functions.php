@@ -69,9 +69,15 @@ function theme_enqueue_scripts()
         array(),
         '1.0'
     );
+    // wp_enqueue_script(
+    //     'swiper',
+    //     'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js',
+    //     array(),
+    //     '1.0'
+    // );
     wp_enqueue_script(
-        'swiper',
-        'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js',
+        'swiper-bundle',
+        get_template_directory_uri() . '/assets/js/swiper-bundle.js',
         array(),
         '1.0'
     );
@@ -251,6 +257,25 @@ function products_post_type()
     register_post_type('products', $args);
 }
 add_action('init', 'products_post_type');
+
+//Reviews
+function reviews_post_type()
+{
+    $args = array(
+        'labels' => array(
+            'name' => 'Reviews',
+            'singular_name' => 'Review',
+        ),
+        'hierarchical' => true,
+        'public' => true,
+        'has_archive' => true,
+        'menu_icon' => 'dashicons-feedback',
+        'supports' => array('title', 'editor', 'thumbnail', 'custom-fields'),
+    );
+
+    register_post_type('reviews', $args);
+}
+add_action('init', 'reviews_post_type');
 
 //Questions
 function questions_post_type()
